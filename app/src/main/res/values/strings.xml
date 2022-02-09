@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TwoActivity</string>
+    <string name="aboutMe">Born on October 31, 1961, in New Zeland, Peter Jackson started his
+        prolific career as a child,creating short films with a 8-mm movie camera.
+        Without any formal training, Jackson has directed a number
+        of successful films ranging across all genres.</string>
+    <string name="hello_i_m_activity_one">Hello, I\'m activity One</string>
 </resources>
