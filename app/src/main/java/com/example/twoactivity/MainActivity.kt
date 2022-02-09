@@ -1,5 +1,6 @@
 package com.example.twoactivity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.twoactivity.databinding.ActivityMainBinding
@@ -12,5 +13,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        binding.firstActivityBtn.setOnClickListener {
+            val intent = Intent(this, AboutMeActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
