@@ -3,6 +3,7 @@ package com.example.twoactivity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.annotation.StringRes
 import com.example.twoactivity.databinding.ActivityAboutMeBinding
@@ -15,8 +16,12 @@ class AboutMeActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+
+        retrieveFromMainActivity()
+
         binding.returnBtn.setOnClickListener {
             toast(R.string.toast_message)
+//            toast(resources.getString(R.string.toast_message))
             backToMainActivity()
         }
     }
@@ -32,4 +37,27 @@ class AboutMeActivity : AppCompatActivity() {
         overridePendingTransition(R.anim.slide_left, R.anim.slide_out_left)
     }
 
+    private fun retrieveFromMainActivity() {
+        // retrieve data from MainActivity intent and put in AboutMeActivity intent
+        val userName = intent.getStringExtra(MainActivity.EXTRA_NAME)?.uppercase()
+        val userCity = intent.getStringExtra(MainActivity.EXTRA_City)?.uppercase()
+
+        // get instance of TextView where we will pass data
+        val setUserName = binding.setUserName
+        val setUserCity = binding.setUserCity
+
+        // set view visible & pass data to them from MainActivity intent
+        setUserName.changeVisibility()
+        setUserName.text = userName
+//        setUserCity.visibility = View.VISIBLE
+        setUserCity.changeVisibility()
+        setUserCity.text = userCity
+    }
+
+    // create extension function, to refuse from code duplication
+    private fun View.changeVisibility() {
+        if (visibility == View.GONE) {
+            visibility = View.VISIBLE
+        }
+    }
 }
