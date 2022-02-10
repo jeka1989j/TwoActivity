@@ -17,13 +17,19 @@ class AboutMeActivity : AppCompatActivity() {
 
         binding.returnBtn.setOnClickListener {
             toast(R.string.toast_message)
-
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            backToMainActivity()
         }
     }
 
     private fun toast(mess: Int) {
         val toast = Toast.makeText(this, mess, Toast.LENGTH_SHORT).show()
     }
+
+    private fun backToMainActivity() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+
+        overridePendingTransition(R.anim.slide_left, R.anim.slide_out_left)
+    }
+
 }

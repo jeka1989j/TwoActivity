@@ -3,6 +3,7 @@ package com.example.twoactivity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.example.twoactivity.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -15,8 +16,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         binding.firstActivityBtn.setOnClickListener {
-            val intent = Intent(this, AboutMeActivity::class.java)
-            startActivity(intent)
+            openActivityAboutMe()
         }
+    }
+
+    private fun openActivityAboutMe() {
+        val intent = Intent(this, AboutMeActivity::class.java)
+        startActivity(intent)
+
+        overridePendingTransition(R.anim.slide_right, R.anim.slide_out_right)
     }
 }
