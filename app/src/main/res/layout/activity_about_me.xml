@@ -7,6 +7,32 @@
     tools:context=".AboutMeActivity">
 
     <TextView
+        android:id="@+id/setUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_margin="24dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        tools:text="Name"/>
+
+    <TextView
+        android:id="@+id/setUserCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_margin="24dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setUserName"
+        android:visibility="gone"
+        tools:text="City"/>
+
+    <TextView
         android:id="@+id/aboutMe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +42,7 @@
         android:layout_marginHorizontal="@dimen/horizontMargin"
         android:text="@string/aboutMe"
         android:background="#D7E5E6"
-        app:layout_constraintVertical_bias=".2"
+        app:layout_constraintVertical_bias=".3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,6 +54,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_launcher_foreground"
         android:background="#AA6B99AF"
+        android:contentDescription="@string/android_image"
         android:layout_marginTop="@dimen/marginTopAboutMe"
         app:layout_constraintTop_toBottomOf="@id/aboutMe"
         app:layout_constraintVertical_bias=".2"
@@ -40,6 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/return_btn"
+        android:contentDescription="@string/image_button_arrow"
         android:background="#EBC975"
         app:layout_constraintTop_toBottomOf="@id/imageAbout"
         app:layout_constraintStart_toStartOf="parent"

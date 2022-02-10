@@ -6,6 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:autofillHints="name"
+        android:inputType="textPersonName"
+        android:hint="@string/enter_your_name"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/userCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:autofillHints="city"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:hint="@string/enter_city_where_you_live"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userName"/>
+
     <TextView
         android:id="@+id/activityOne"
         android:layout_width="wrap_content"
@@ -22,7 +50,7 @@
         android:id="@+id/firstActivityBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Activity Two"
+        android:text="@string/activity_two"
         android:layout_marginTop="@dimen/marginTop"
         app:layout_constraintTop_toBottomOf="@id/activityOne"
         app:layout_constraintVertical_bias=".2"

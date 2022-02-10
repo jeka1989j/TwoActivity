@@ -6,4 +6,9 @@
         of successful films ranging across all genres.</string>
     <string name="hello_i_m_activity_one">Hello, I\'m activity One</string>
     <string name="toast_message">You return Back to first Activity</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="enter_city_where_you_live">Enter City Where You Live</string>
+    <string name="activity_two">Activity Two</string>
+    <string name="android_image">Android Image</string>
+    <string name="image_button_arrow">Image Button Arrow</string>
 </resources>
