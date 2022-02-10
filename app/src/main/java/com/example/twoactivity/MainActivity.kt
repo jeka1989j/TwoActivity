@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import com.example.twoactivity.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -21,9 +22,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openActivityAboutMe() {
+        // get user input data
+        val userName = binding.userName.text
+        val userCity = binding.userCity.text
+
+        // Create intent
         val intent = Intent(this, AboutMeActivity::class.java)
+        // put data in Intent
+        intent.putExtra(EXTRA_NAME, userName)
+        intent.putExtra(EXTRA_City, userCity)
+        // start our activity with intent with data, which we pass into intent
         startActivity(intent)
 
         overridePendingTransition(R.anim.slide_right, R.anim.slide_out_right)
+    }
+
+    companion object {
+        const val EXTRA_NAME = "Text"
+        const val EXTRA_City = "Text"
     }
 }
