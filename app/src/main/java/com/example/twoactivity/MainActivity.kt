@@ -17,14 +17,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         binding.firstActivityBtn.setOnClickListener {
-            openActivityAboutMe()
+            openActivityAboutMe(it)
         }
     }
 
-    private fun openActivityAboutMe() {
+    private fun openActivityAboutMe(view: View) {
         // get user input data
-        val userName = binding.userName.text
-        val userCity = binding.userCity.text
+        val userName = binding.userName.text.toString()
+        val userCity = binding.userCity.text.toString()
 
         // Create intent
         val intent = Intent(this, AboutMeActivity::class.java)
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val EXTRA_NAME = "Text"
-        const val EXTRA_City = "Text"
+        const val EXTRA_NAME = "Name"
+        const val EXTRA_City = "City"
     }
 }
