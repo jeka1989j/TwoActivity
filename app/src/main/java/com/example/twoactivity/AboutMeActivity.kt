@@ -24,19 +24,7 @@ class AboutMeActivity : AppCompatActivity() {
             toast(R.string.toast_message)
 //            toast(resources.getString(R.string.toast_message))
 
-//            // set data from intent MainActivity
-//            val result = retrieveFromMainActivity()
-//            Log.i("About", "$result")
-//            // instantiate empty intent
-//            val resultIntent = Intent()
-//            // put data in intent which we instantiate before
-//            resultIntent.putExtra("result", result)
-//
-//            // return back to MainActivity with values
-//            setResult(RESULT_OK, resultIntent)
-
             backToMainActivity()
-//            finish()
         }
     }
 
@@ -78,7 +66,7 @@ class AboutMeActivity : AppCompatActivity() {
         // set view visible & pass data to them from MainActivity intent
         setUserName.changeVisibility()
         setUserName.text = userName
-//        setUserCity.visibility = View.VISIBLE
+
         setUserCity.changeVisibility()
         setUserCity.text = userCity
     }
