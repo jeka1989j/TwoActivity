@@ -11,4 +11,7 @@
     <string name="activity_two">Activity Two</string>
     <string name="android_image">Android Image</string>
     <string name="image_button_arrow">Image Button Arrow</string>
+    <string name="resultFromAboutMe">Hello, %s from %s</string>
+    <string name="resultAboutMeNameCity">Hello, %s , from %s</string>
+
 </resources>
