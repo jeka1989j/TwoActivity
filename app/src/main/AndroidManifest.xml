@@ -11,6 +11,7 @@
         android:theme="@style/Theme.TwoActivity">
         <activity
             android:name=".AboutMeActivity"
+            android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
